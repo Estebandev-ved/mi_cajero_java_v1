@@ -1,2 +1,2 @@
 # mi_cajero_java_v1
-Proyecto de un cajero
+##Repositorio de código en Java de la actividad de cajero realizado como entregable al curso construccion de software
