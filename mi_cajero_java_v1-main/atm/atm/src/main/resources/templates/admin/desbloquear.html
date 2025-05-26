@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancobit-desbloquear</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+         <h2><i class="fas fa-lock-open"></i>Desbloquear</h2>
+        <form th:action="@{/admin/desbloquear}" method="post">
+            <div class="form-group">
+                <label><i class="fas fa-id-card"></i>Identificación: </label>
+                <input type="text" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-key"></i>NUEVO PIN: </label>
+                <input type="password" name="nuevoPin"  required>
+            </div>
+
+            <button type="submit" class="admin-btn">
+                <i class="fas fa-unlock"></i>Desbloquer ahora
+            </button>
+        </form>
+
+        <div  th:if="${mensaje}" th:text="${mensaje}"
+        th:class="${error} ? 'message error': 'message success'"></div>
+
+        <a th:href="@{/admin}" class="back-btn">
+            <i class="fas fa-arrow-left"></i> Volver
+        </a>
+    </div>
+    
+</body>
+</html>
