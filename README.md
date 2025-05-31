@@ -60,3 +60,19 @@ Sigue estos pasos para poner en marcha el proyecto:
 
 La estructura principal del proyecto es la siguiente:
 ...
+atm/
+├── src/
+│   ├── main/
+│   │   ├── java/                 # Código fuente Java de la aplicación
+│   │   └── resources/            # Archivos de configuración y propiedades
+├── pom.xml                       # Archivo de configuración principal de Maven
+└── mvnw, mvnw.cmd                # Scripts para ejecutar Maven sin necesidad de instalarlo globalmente
+
+---
+
+### 🧪 Pruebas
+
+Puedes ejecutar las pruebas automatizadas del proyecto con el siguiente comando:
+
+```bash
+./mvnw test
