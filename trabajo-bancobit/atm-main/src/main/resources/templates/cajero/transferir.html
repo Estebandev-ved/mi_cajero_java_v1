@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Transferencia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/styles/cajero.css}">
+    <script th:inline="javascript">
+        function buscarTitular() {
+            const numeroCuenta = document.getElementById("numeroCuentaDestino").value;
+            if (numeroCuenta.length < 5) return;
+            
+            document.getElementById("titularInfo").textContent = "Buscando...";
+            
+            fetch(`/cajero/titular?numero=${numeroCuenta}`)
+                .then(response => response.json())
+                .then(data => {
+                    const info = data.nombre 
+                        ? `Titular: ${data.nombre}` 
+                        : "Cuenta no encontrada";
+                    document.getElementById("titularInfo").textContent = info;
+                })
+                .catch(() => {
+                    document.getElementById("titularInfo").textContent = "Error al buscar titular";
+                });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2><i class="fas fa-exchange-alt"></i> Transferencia a otra cuenta</h2>
+
+        <form th:action="@{/cajero/transferir}" method="post">
+            <div class="form-group">
+                <label for="numeroCuentaDestino"><i class="fas fa-credit-card"></i> Número de Cuenta Destino:</label>
+                <input type="text" id="numeroCuentaDestino" name="numeroCuentaDestino" required onblur="buscarTitular()">
+                <span id="titularInfo" class="info-text"></span>
+            </div>
+            
+            <div class="form-group">
+                <label for="monto"><i class="fas fa-money-bill-wave"></i> Monto a transferir:</label>
+                <input type="number" id="monto" name="monto" step="0.01" min="1" required>
+            </div>
+            
+            <button type="submit">Transferir</button>
+        </form>
+
+        <div th:if="${mensaje}">
+            <p class="mensaje-exito" th:text="${mensaje}"></p>
+        </div>
+        <div th:if="${error}">
+            <p class="mensaje-error" th:text="${error}"></p>
+        </div>
+        
+        <a th:href="@{/cajero/menu}" class="btn-secondary"><i class="fas fa-arrow-left"></i> Volver al menú</a>
+    </div>
+</body>
+</html>

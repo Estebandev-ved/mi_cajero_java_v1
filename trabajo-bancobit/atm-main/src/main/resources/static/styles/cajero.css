@@ -1,0 +1,336 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background: #1e1e2f;
+  margin-top: 40px;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+  width: 380px;
+}
+
+.container h1 {
+  font-weight: 700;
+  font-size: 1.9rem;
+  margin-bottom: 8px;
+  color: #00bcd4;
+  text-align: center;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+.container h2 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-bottom: 25px;
+  color: #00bcd4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-shadow: 0 0 10px #00bcd4;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  color: #e0e0e0;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background: #2a2a3f;
+  color: #e0e0e0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  box-sizing: border-box; 
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.6);
+}
+
+.form-group select option {
+  background: #2a2a3f;
+  color: #e0e0e0;
+}
+
+.info-text {
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: #90caf9; /* Un color más suave para información */
+  text-align: right;
+  min-height: 18px; /* Para mantener el espacio incluso si no hay texto */
+}
+
+button {
+  background: #00bcd4;
+  color: #121212;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0097a7;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #90caf9;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  color: #00bcd4;
+}
+
+.mensaje-exito,
+.mensaje-error {
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.mensaje-exito {
+  background-color: #4caf50cc;
+  color: #e6f4ea;
+  box-shadow: 0 0 12px #4caf50bb;
+}
+
+.mensaje-error {
+  background-color: #f44336cc;
+  color: #fbeaea;
+  box-shadow: 0 0 12px #f44336bb;
+}
+
+
+
+.admin-btn {
+  background: #2a2a3f;
+  border: none;
+  color: #121212;
+  padding: 14px 0;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admin-btn:hover {
+  background: #00bcd4;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  color: #e0e0e0;
+} 
+
+.back-btn { 
+  display: inline-flex;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #90caf9;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.back-btn:hover { 
+  color: #00bcd4;
+}
+
+.admin-menu { 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.admin-menu li { 
+  background: #2a2a3f;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: 600;
+  color: #e0e0e0;
+}
+
+.admin-menu li i { 
+  font-size: 1.4rem;
+  color: #00bcd4;
+  min-width: 25px;
+  text-align: center;
+}
+
+.admin-menu li:hover {
+  background: #00bcd4;
+  color: #121212;
+  transform: translateX(6px);
+}
+
+.admin-menu li:hover i { 
+  color: #121212;
+}
+
+.admin-menu li a { 
+  color: inherit;
+  text-decoration: none;
+  flex-grow: 1;
+}
+
+.message { 
+  margin-top: 20px;
+  padding: 14px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.message.exito { 
+  background-color: #4caf50cc;
+  color: #e6f4ea;
+  box-shadow: 0 0 12px #4caf50bb;
+}
+
+.message.error { 
+  background-color: #f44336cc;
+  color: #fbeaea;
+  box-shadow: 0 0 12px #f44336bb;
+}
+
+.cuenta-list {
+  list-style: none; /* Quita los puntos de la lista */
+  padding: 0;
+  margin: 25px 0; /* Espacio superior e inferior */
+}
+
+.cuenta-list li {
+  background: #2a2a3f; /* Fondo oscuro similar a otros elementos interactivos */
+  margin-bottom: 15px; /* Espacio entre cada cuenta */
+  padding: 18px 25px; /* Relleno interno */
+  border-radius: 10px; /* Bordes redondeados */
+  display: flex;
+  justify-content: space-between; /* Alinea contenido y botón a los extremos */
+  align-items: center; /* Centra verticalmente */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5); /* Sombra sutil */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones para el hover */
+}
+
+.cuenta-list li:hover {
+  transform: translateY(-3px); /* Ligero levantamiento al pasar el ratón */
+  box-shadow: 0 6px 15px rgba(0,0,0,0.7); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.cuenta-list li span {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espacio entre el icono y el texto */
+  font-size: 1.15rem; /* Tamaño de fuente para la información de la cuenta */
+  font-weight: 600;
+  color: #e0e0e0; /* Color del texto */
+}
+
+.cuenta-list li span i {
+  font-size: 1.6rem; /* Tamaño del icono de la tarjeta */
+  color: #00bcd4; /* Color del icono, consistente con el tema */
+  min-width: 30px; /* Asegura que el icono tenga un ancho fijo */
+  text-align: center;
+}
+
+/* Estilos para el botón de movimientos dentro de la lista */
+.cuenta-list li .btn-secondary {
+  display: inline-flex; /* Para alinear icono y texto */
+  padding: 10px 18px; /* Relleno del botón */
+  border-radius: 8px; /* Bordes redondeados del botón */
+  font-size: 0.95rem; /* Tamaño de fuente más pequeño para el botón */
+  font-weight: 600;
+  text-decoration: none;
+  color: #90caf9; /* Color de texto del botón, consistente con otros btn-secondary */
+  background-color: #333; /* Fondo para distinguirlo del elemento li */
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.cuenta-list li .btn-secondary:hover {
+  color: #121212; /* Texto oscuro al pasar el ratón */
+  background-color: #00bcd4; /* Fondo azul al pasar el ratón */
+  transform: translateY(-1px); /* Ligero levantamiento del botón */
+}
+
+/* Mantener el estilo general del "Volver al menú" */
+.btn-secondary {
+  display: inline-flex;
+  margin-top: 30px;
+  text-decoration: none;
+  color: #90caf9;
+  font-weight: 600;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  color: #00bcd4;
+}
+
+/* ... el resto de tus estilos (admin-btn, mensajes, etc.) ... */

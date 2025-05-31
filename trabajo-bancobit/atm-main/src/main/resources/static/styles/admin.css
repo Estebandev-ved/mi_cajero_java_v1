@@ -1,0 +1,160 @@
+/* admin.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  
+  .admin-container {
+    background: #1e1e2f;
+    margin-top: 40px;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.8);
+    width: 380px;
+  }
+  
+  .admin-container h1 {
+    font-weight: 700;
+    font-size: 1.9rem;
+    margin-bottom: 8px;
+    color: #00bcd4;
+    text-align: center;
+    text-shadow: 0 0 10px #00bcd4;
+  }
+  
+  .admin-container h2 {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+    color: #00bcd4;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-shadow: 0 0 10px #00bcd4;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .admin-btn {
+    background: #2a2a3f;
+    border: none;
+    color: #121212;
+    padding: 14px 0;
+    width: 100%;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+
+  .admin-btn:hover {
+    background: #00bcd4;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    color: #e0e0e0;
+  } 
+
+  .back-btn {
+    display: inline-flex;
+    margin-top: 30px;
+    text-decoration: none;
+    color: #90caf9;
+    font-weight: 600;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+  }
+  
+  .back-btn:hover {
+    color: #00bcd4;
+  }
+  
+  .admin-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .admin-menu li {
+    background: #2a2a3f;
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    font-weight: 600;
+    color: #e0e0e0;
+  }
+  
+  .admin-menu li i {
+    font-size: 1.4rem;
+    color: #00bcd4;
+    min-width: 25px;
+    text-align: center;
+  }
+  
+  .admin-menu li:hover {
+    background: #00bcd4;
+    color: #121212;
+    transform: translateX(6px);
+  }
+  
+  .admin-menu li:hover i {
+    color: #121212;
+  }
+  
+  .admin-menu li a {
+    color: inherit;
+    text-decoration: none;
+    flex-grow: 1;
+  }
+  
+  .message {
+    margin-top: 20px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-align: center;
+  }
+  
+  .message.success {
+    background-color: #4caf50cc;
+    color: #e6f4ea;
+    box-shadow: 0 0 12px #4caf50bb;
+  }
+  
+  .message.error {
+    background-color: #f44336cc;
+    color: #fbeaea;
+    box-shadow: 0 0 12px #f44336bb;
+  }

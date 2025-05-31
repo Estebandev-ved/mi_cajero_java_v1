@@ -1,0 +1,129 @@
+/* menu.css */
+
+/* Reset y base */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background: #121212; /* Negro profundo */
+  color: #f0f0f0; /* Verde neón */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  user-select: none;
+}
+
+/* Título */
+h2 {
+  margin: 2rem 0 1.5rem 0;
+  font-size: 2.5rem;
+  text-shadow: 0 8px 20px rgba(0,0,0,0.8);
+}
+
+/* Span del nombre */
+h2 span {
+  color: #00bcd4;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 0 10px #00bcd4;
+}
+
+/* Grid menú */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  width: 80vw;
+  max-width: 900px;
+  padding: 1rem;
+}
+
+/* Items menú */
+.menu-item {
+  background: #2a2a3f;
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: #e0e0e0;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 0 12px#00bcd4 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Iconos dentro del item */
+.menu-item i {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 0 4px #00bcd4 );
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover y foco: vibración hacker */
+.menu-item:hover, 
+.menu-item:focus {
+  background:  #2a2a3f;
+  border-color:#00bcd4;
+  color:#00bcd4;
+  box-shadow: 0 0 24px #00bcd4, 0 0 40px #00bcd4;
+  transform: translateY(-5px);
+  outline: none;
+}
+
+.menu-item:hover i, 
+.menu-item:focus i {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+/* Botón cerrar sesión */
+.logout-btn {
+  margin: 2rem 0 3rem 0;
+  padding: 0.75rem 2rem;
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  align-self: center;
+  user-select: none;
+}
+
+.logout-btn:hover {
+  background: #00bcd4;
+  color: #2a2a3f;
+  box-shadow: 0 0 20px #00bcd4;
+}
+
+/* Animación de fondo tipo terminal */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+  70% { opacity: 0.9; }
+  80% { opacity: 0.8; }
+}
+body {
+  animation: flicker 3s infinite;
+}
+
+/* Scrollbar oscuro para que combine */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background:  #2a2a3f;
+}
+::-webkit-scrollbar-thumb {
+  background:#00bcd4;
+  border-radius: 10px;
+  border: 2px solid  #2a2a3f;
+}

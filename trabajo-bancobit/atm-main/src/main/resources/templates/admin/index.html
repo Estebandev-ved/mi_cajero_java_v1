@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bancobit Control Center  Admin & Cajero </title>
+    <link rel="stylesheet" th:href="@{/styles/admin.css}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="admin-container">
+    <h1> Bancobit 😎👾 </h1>
+    <h2><i class="fas fa-user-shield" >
+    </i>Menú Administración</h2>
+
+    <ul class="admin-menu" >
+        <li>
+            <a th:href="@{admin/crear-cliente}">
+            <i class="fas fa-user-plus"></i>
+            Crear Cliente
+            </a>
+        </li>
+        <li>
+            <a th:href="@{admin/crear-cuenta}">
+            <i class="fas fa-credit-card"></i>
+            Crear Cuenta
+            </a>
+        </li>
+        <li>
+            <a th:href="@{admin/desbloquear}">
+            <i class="fas fa-lock-open"></i>
+            Desbloquear Cuenta
+            </a>
+        </li>
+    </ul>
+
+</div>
+</body>
+</html>
