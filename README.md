@@ -1,4 +1,4 @@
-# Cajero Fácil: Simulador de Transacciones Bancarias
+# Bancobit: Simulador de Transacciones Bancarias
 
 Este proyecto es un simulador básico de cajero automático desarrollado en **Java** con **Spring Boot**, diseñado para replicar operaciones bancarias fundamentales como depósitos, retiros y consulta de saldo. Su objetivo es proporcionar una plataforma sencilla para entender la lógica detrás de estas transacciones en un entorno de desarrollo moderno.
 
@@ -35,11 +35,11 @@ Sigue estos pasos para poner en marcha el proyecto:
 
 1.  **Clona el repositorio:**
     ```bash
-    git clone [https://github.com/Estebandev-ved/cajero123.git](https://github.com/Estebandev-ved/cajero123.git)
+    git clone [https://github.com/Estebandev-ved/atm](https://github.com/Estebandev-ved/atm.git)
     ```
 2.  **Navega al directorio del proyecto:**
     ```bash
-    cd cajero123
+    cd atm
     ```
 3.  **Compila y construye el proyecto usando Maven Wrapper:**
     ```bash
